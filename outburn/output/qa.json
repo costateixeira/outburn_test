@@ -1,0 +1,9 @@
+{
+  "url": "http://fhir.outburn.co.il//ImplementationGuide/outburn",
+  "name": "outburnImplementationGuide",
+  "package-id": "outburn",
+  "ig-ver": "0.3.0",
+  "date": "Wed, 16 Feb, 2022 20:47:45 +0200",
+  "version": "4.0.1",
+  "tool": "5.0.0-snapshot1 (3)"
+}

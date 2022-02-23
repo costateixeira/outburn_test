@@ -1,0 +1,276 @@
+{
+  "resourceType": "Bundle",
+  "id": "outburn-medication-bundle-example",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:f40d8fb1-eb79-4a7f-b1e0-5c0a01cb7788",
+      "resource": {
+        "resourceType": "List",
+        "id": "f40d8fb1-eb79-4a7f-b1e0-5c0a01cb7788",
+        "identifier": [
+          {
+            "system": "http://fhir.tlvmc.gov.il/identifier/EMR-MIrshamID",
+            "value": "4A310EAE-E181-44B8-8834-2B53540F4AEF"
+          }
+        ],
+        "status": "current",
+        "mode": "working",
+        "title": "2021-10-07 4A310EAE-E181-44B8-8834-2B53540F4AEF איכילוב אורטופדית 015596570 ",
+        "code": {
+          "coding": [
+            {
+              "code": "medications",
+              "system": "http://terminology.hl7.org/CodeSystem/list-example-use-codes",
+              "display": "Medication List"
+            }
+          ]
+        },
+        "subject": {
+          "type": "Patient",
+          "identifier": {
+            "system": "http://fhir.health.gov.il/identifier/il-national-id",
+            "value": "015596570"
+          }
+        },
+        "encounter": {
+          "type": "Encounter",
+          "reference": "urn:uuid:c4dac8c7-4e4b-470d-bd11-e064b4ac7d0a",
+          "display": "איכילוב - אורטופדית"
+        },
+        "source": {
+          "type": "Practitioner",
+          "reference": "urn:uuid:54064413-5410-4fa3-94df-b068f3f721cb"
+        },
+        "entry": [
+          {
+            "item": {
+              "type": "MedicationRequest",
+              "reference": "urn:uuid:8647b207-03da-4215-b027-36f28fe15c9c",
+              "display": "Azithromycin 250mg capsule (product)"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "List"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54064413-5410-4fa3-94df-b068f3f721cb",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "54064413-5410-4fa3-94df-b068f3f721cb",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2021-10-10T20:39:31.699+00:00",
+          "source": "#bxcWffNecEN97Eag"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.health.gov.il/identifier/il-national-id",
+            "value": "032861809"
+          },
+          {
+            "system": "http://practitioners.health.gov.il/Practitioners",
+            "value": "1-14840"
+          }
+        ],
+        "name": [
+          {
+            "text": "דר משה מלכין",
+            "family": "מלכין",
+            "given": [
+              "משה"
+            ],
+            "prefix": [
+              "דר"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c4dac8c7-4e4b-470d-bd11-e064b4ac7d0a",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "c4dac8c7-4e4b-470d-bd11-e064b4ac7d0a",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2021-10-10T20:40:49.068+00:00",
+          "source": "#Ae4BlXcKDu29l2Zd"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.health.gov.il/encounter-OFEK-EITAN",
+            "value": "886546434356434"
+          },
+          {
+            "system": "http://fhir.tlvmc.gov.il/identifier/EMR-Encounter-no",
+            "value": "v6765654651"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "type": "Patient",
+          "identifier": {
+            "system": "http://fhir.health.gov.il/identifier/il-national-id",
+            "value": "015596570"
+          }
+        },
+        "serviceProvider": {
+          "identifier": {
+            "system": "https://institutions.health.gov.il/Institutions",
+            "value": "1201"
+          },
+          "display": "איכילוב - אורטופדית"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8647b207-03da-4215-b027-36f28fe15c9c",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "8647b207-03da-4215-b027-36f28fe15c9c",
+        "meta": {
+          "versionId": "3",
+          "lastUpdated": "2021-10-10T20:51:24.537+00:00",
+          "source": "#cJg93vmGeLeUyHdy"
+        },
+        "identifier": [
+          {
+            "system": "http://fhir.tlvmc.gov.il/identifier/Medication-in-MIrsham-ROWID",
+            "value": "12345689"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://fhir.tlvmc.gov.il/identifier/EMR-Medication-Code",
+              "code": "3734",
+              "display": "NOVORAPID insulin vial 100 U/ml",
+              "userSelected": true
+            },
+            {
+              "system": "http://yarpa.co.il/catalog",
+              "code": "324252006",
+              "display": "Azithromycin 250mg capsule (product)",
+              "userSelected": false
+            },
+            {
+              "system": "http://www.whocc.no/atc",
+              "code": "324252006",
+              "display": "I dont know ATC code",
+              "userSelected": false
+            }
+          ]
+        },
+        "subject": {
+          "type": "Patient",
+          "identifier": {
+            "system": "http://fhir.health.gov.il/identifier/il-national-id",
+            "value": "015596570"
+          }
+        },
+        "encounter": {
+          "reference": "urn:uuid:c4dac8c7-4e4b-470d-bd11-e064b4ac7d0a",
+          "type": "Encounter"
+        },
+        "authoredOn": "2021-10-07T20:45:10",
+        "requester": {
+          "reference": "urn:uuid:54064413-5410-4fa3-94df-b068f3f721cb",
+          "type": "Practitioner"
+        },
+        "note": [
+          {
+            "text": "Patient told to take with food"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "timing": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 30,
+                  "code": "d"
+                },
+                "frequency": 3,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "site": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "123851003",
+                  "display": "Mouth region structure"
+                }
+              ]
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral Route"
+                }
+              ]
+            },
+            "method": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "421521009",
+                  "display": "Swallow - dosing instruction imperative (qualifier value)"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 2,
+                  "unit": "TAB",
+                  "system": " http://unitsofmeasure.org",
+                  "code": "TAB"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2021-10-07",
+            "end": "2021-10-22"
+          },
+          "quantity": {
+            "value": 6,
+            "unit": "TAB",
+            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+            "code": "TAB"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "resourceType": "Questionnaire",
+    "url": "http://http://hapi-fhir.outburn.co.il/Questionnaire/test-q",
+    "identifier": [{"value": "1111"}],
+    "version": "1",
+    "name": "test",
+    "status": "active",
+    "subjectType": "Patient",
+    "publisher": "Israeli Ministry the Health",
+    "title": "שאלון גנטי - שאלון עזר לסקר מחלות במשפחה",
+    "item": [
+      {
+        "linkId": "1",
+        "text": "שאלות כלליות",
+        "type": "group",
+        "required": true,
+        "item": [
+          {
+            "linkId": "1.1",
+            "text": "האם ביצעת בעבר בדיקה גנטית?",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "linkId": "1.2",
+            "text": "מהו שבוע ההריון?",
+            "type": "integer",
+            "enableWhen": [
+              {
+                "question": "1.1",
+                "operator": "=",
+                "answerBoolean": true
+              }
+            ],
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+  
+  

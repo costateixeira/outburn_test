@@ -1,0 +1,29 @@
+<!-- ####### HTML for the issue-regards extension #########-->
+<h2 style="color: #5e9ca0;"><span style="color: #5e9ca0;">Extension: </span></h2>
+<h2 style="color: #2e6c80; font-size: 14px;"><span style="text-decoration: underline;">Issue-regards (<a title="Issue Regards Extension" href="https://simplifier.net/outburn/issueregards" target="_blank">click here to go to resource page</a>)</span></h2>
+<p><span class="constraints"><strong>Short description</strong></span></p>
+<p><span class="constraints">Issue Regards</span></p>
+<p><span class="constraints"><strong>Definition</strong></span></p>
+<div class="markdown constraints">
+<p>Allows returning of information regarding which item returned an error. for example, an application may want to know why patients from a list of patients were not returned in a search result, the reason for the absence of each one and their MRN. The base OperationOutcome resource may return the coded reason, but there is no discrete standard element that may hold the MRN. There are only ambiguous ways to return this information, such as in the text description of the error.</p>
+</div>
+<p><strong>Data Type</strong></p>
+<p><a title="Extensionhl7.fhir.r4.core 4.0.1StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955">Extension</a></p>
+<p><strong>Context(s):&nbsp;</strong></p>
+<blockquote>
+<p>1. <span class="string">CoverageEligibilityResponse.error</span></p>
+<p><span class="string">2. </span><span class="string">OperationOutcome.issue</span></p>
+</blockquote>
+<p><strong>Constraints</strong></p>
+<div>
+<ul>
+<li class=""><strong>ele-1:</strong>All FHIR elements must have a @value or children<br /><code>hasValue() or (children().count() &gt; id.count())</code></li>
+<li class=""><strong>ext-1:</strong>Must have either extensions or value[x], not both<br /><code>extension.exists() != value.exists()</code></li>
+</ul>
+</div>
+<p><strong>Mappings</strong></p>
+<ul>
+<li class=""><strong>rim:</strong>n/a</li>
+<li class=""><strong>rim:</strong>N/A</li>
+</ul>
+<p><strong>&nbsp;</strong></p>
